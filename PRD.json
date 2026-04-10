@@ -1,0 +1,82 @@
+﻿{
+  "tasks": [
+    {
+      "title": "Create project structure: main.py, src/__init__.py, src/timer.py, src/ui.py, src/tray.py, src/sound.py, assets/ folder, requirements.txt with customtkinter pystray pillow pygame",
+      "completed": false,
+      "parallel_group": 1,
+      "description": "Scaffold all files and folders"
+    },
+    {
+      "title": "Create README.md with app description, install steps using uv venv and uv pip install -r requirements.txt, and run instructions python main.py",
+      "completed": false,
+      "parallel_group": 1,
+      "description": "Simple readme explaining what Chronos is and how to run it"
+    },
+    {
+      "title": "Implement Timer class in src/timer.py with start, pause, resume, reset, stop methods. Runs in background thread, fires callback every second. Supports countdown and stopwatch modes. Triggers alert callback on countdown completion.",
+      "completed": false,
+      "parallel_group": 2,
+      "description": "Core timer logic, no UI dependencies"
+    },
+    {
+      "title": "Generate alert sound file assets/alert.wav programmatically using pygame or wave module. Simple short beep tone.",
+      "completed": false,
+      "parallel_group": 2,
+      "description": "Generate the wav file in code so no external assets needed"
+    },
+    {
+      "title": "Generate app icon assets/chronos.ico programmatically using Pillow. Simple clock face design.",
+      "completed": false,
+      "parallel_group": 2,
+      "description": "Generate the ico file in code so no external assets needed"
+    },
+    {
+      "title": "Build main CustomTkinter window in src/ui.py: dark theme, 400x320px, no resize, window title Chronos, app icon set. Large HH:MM:SS digital display centered using monospace font. Mode toggle Countdown/Stopwatch at top.",
+      "completed": false,
+      "parallel_group": 3,
+      "description": "Base window and time display only, no controls yet"
+    },
+    {
+      "title": "Add countdown input fields hours/minutes/seconds below mode toggle, visible only in countdown mode. Add Start, Pause/Resume, Reset control buttons with rounded corners.",
+      "completed": false,
+      "parallel_group": 4,
+      "description": "Input fields and control buttons wired to Timer class"
+    },
+    {
+      "title": "Add progress bar showing percentage remaining in countdown mode. Add color shift on completion: time display flashes red. Add always-on-top toggle checkbox in bottom corner.",
+      "completed": false,
+      "parallel_group": 4,
+      "description": "Progress bar and visual feedback"
+    },
+    {
+      "title": "Implement sound module in src/sound.py: play alert.wav on countdown completion, mute toggle. Add mute button to UI.",
+      "completed": false,
+      "parallel_group": 5,
+      "description": "Sound playback via pygame mixer wired to timer alert callback"
+    },
+    {
+      "title": "Add keyboard shortcuts: Space = Start/Pause/Resume, R = Reset, M = Mute toggle, Escape = minimize to tray.",
+      "completed": false,
+      "parallel_group": 5,
+      "description": "Bind keys in the CustomTkinter window"
+    },
+    {
+      "title": "Implement system tray in src/tray.py using pystray: app minimizes to tray on window close, tray menu shows Restore/Start/Pause/Reset/Quit options.",
+      "completed": false,
+      "parallel_group": 6,
+      "description": "pystray integration runs in separate thread"
+    },
+    {
+      "title": "Wire everything in main.py: import Timer, UI, tray. Handle clean shutdown stopping threads and removing tray icon. Add if __name__ == '__main__' guard.",
+      "completed": false,
+      "parallel_group": 7,
+      "description": "Entry point only, no logic here"
+    },
+    {
+      "title": "Test: start a 5-second countdown, verify completion alert fires and display flashes red, verify reset works, verify mute toggle works.",
+      "completed": false,
+      "parallel_group": 8,
+      "description": "Smoke test to verify the full app works end to end"
+    }
+  ]
+}
